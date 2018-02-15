@@ -1,5 +1,7 @@
 # docker-jenkins-with-arma3-tools
-Dockerized Jenkins with helpful Arma 3 related tools pre-installed
+Dockerized Jenkins with helpful Arma 3-related tools pre-installed
+
+Available from the [Docker Hub](https://hub.docker.com/r/samlex/docker-jenkins-with-arma3-tools/)
 
 # Tools
 * [DePBO Tools 0.6.63](https://armaservices.maverick-applications.com/Products/MikerosDosTools/FileBrowserFree)
@@ -13,4 +15,4 @@ The custom formatter can be used in a build step like
 sqflint -d . | sqflint-formatter.bash
 ```
 
-This custom format produced can be parsed by adding a "Scan for compiler warnings" post-build stage and selecting the "SQF Lint" parser.
+The custom format produced can be parsed by adding a "Scan for compiler warnings" post-build stage and selecting the "SQF Lint" parser.
