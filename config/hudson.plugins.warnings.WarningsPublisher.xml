@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.warnings.WarningsDescriptor plugin="warnings@4.65">
+  <groovyParsers>
+    <hudson.plugins.warnings.GroovyParser>
+      <name>SQF Lint</name>
+      <regexp>^\[SQFLINT\]\s(.*)\s\[([0-9]+),[0-9]+\]:([a-z]+):(.*)$</regexp>
+      <script>import hudson.plugins.warnings.parser.Warning
+import hudson.plugins.analysis.util.model.Priority
+
+String fileName = matcher.group(1)
+String lineNumber = matcher.group(2)
+String type = matcher.group(3)
+String message = matcher.group(4)
+
+Priority priority = (type.equals(&quot;error&quot;)) ? Priority.HIGH : Priority.NORMAL
+
+return new Warning(fileName, Integer.parseInt(lineNumber), type, type, message, priority);</script>
+      <example>[SQFLINT] f/assignGear/f_assignGear_natoPacific_light.sqf 	[469,22]:warning:Local variable &quot;_diverMag1&quot; is not from this scope (not private)</example>
+      <linkName>SQF Lint</linkName>
+      <trendName>SQF Lint</trendName>
+    </hudson.plugins.warnings.GroovyParser>
+  </groovyParsers>
+</hudson.plugins.warnings.WarningsDescriptor>
