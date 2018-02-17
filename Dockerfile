@@ -17,6 +17,9 @@ RUN curl -L https://armaservices.maverick-applications.com/Products/MikerosDosTo
 ### Actual Jenkins image
 FROM jenkins/jenkins:lts
 
+MAINTAINER samlex <samlex@gmx.com>
+LABEL maintainer="samlex <samlex@gmx.com>"
+
 ARG SQFLINT_VERSION
 
 USER root
