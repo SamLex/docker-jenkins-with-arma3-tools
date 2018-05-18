@@ -15,7 +15,7 @@ RUN curl -L https://armaservices.maverick-applications.com/Products/MikerosDosTo
 	chmod +x /root/depbo-tools/bin/*
 
 ### Actual Jenkins image
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:2.107.3
 
 MAINTAINER samlex <samlex@gmx.com>
 LABEL maintainer="samlex <samlex@gmx.com>"
