@@ -1,6 +1,6 @@
 ### Versions of external tools
-ARG DEPBO_VERSION=0.6.77
-ARG SQFLINT_VERSION=0.3.1
+ARG DEPBO_VERSION=0.6.83
+ARG SQFLINT_VERSION=0.3.2
 
 
 ### Build stage to download DePBO tools
@@ -15,7 +15,7 @@ RUN curl -L https://armaservices.maverick-applications.com/Products/MikerosDosTo
 	chmod +x /root/depbo-tools/bin/*
 
 ### Actual Jenkins image
-FROM jenkins/jenkins:2.107.3
+FROM jenkins/jenkins:2.136
 
 MAINTAINER samlex <samlex@gmx.com>
 LABEL maintainer="samlex <samlex@gmx.com>"
