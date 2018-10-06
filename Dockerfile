@@ -1,5 +1,5 @@
 ### Versions of external tools
-ARG DEPBO_VERSION=0.6.83
+ARG DEPBO_VERSION=0.6.88
 ARG SQFLINT_VERSION=0.3.2
 
 
